@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-android-dev-4e3e3-authRole",
+      "UnauthRoleArn": "arn:aws:iam::339712998318:role/amplify-android-dev-4e3e3-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::339712998318:role/amplify-android-dev-4e3e3-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-android-dev-4e3e3-deployment",
+      "UnauthRoleName": "amplify-android-dev-4e3e3-unauthRole",
+      "StackName": "amplify-android-dev-4e3e3",
+      "StackId": "arn:aws:cloudformation:ap-south-1:339712998318:stack/amplify-android-dev-4e3e3/e1794cf0-65d4-11ef-a113-020577961333",
+      "AmplifyAppId": "d3jxhdv3gfsavb"
+    },
+    "categories": {
+      "auth": {
+        "android9ab628679ab62867": {}
+      }
+    }
+  }
+}
