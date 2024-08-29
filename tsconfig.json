@@ -1,6 +1,30 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "baseUrl": "./src/",
+    "strictNullChecks": true,
+    "paths": {
+      "@navigation": ["./navigation/index"],
+      "@navigation/*": ["./navigation/*"],
+      "@foundation": ["./foundation/index"],
+      "@foundation/*": ["./foundation/*"],
+      "@providers": ["./providers/index"],
+      "@providers/*": ["./providers/*"],
+      "@components": ["./components/index"],
+      "@components/*": ["./components/*"],
+      "@utils": ["./utils/index"],
+      "@utils/*": ["./utils/*"],
+      "@types": ["./types/index"],
+      "@types/*": ["./types/*"],
+      "@api": ["./api/index"],
+      "@api/*": ["./api/*"],
+      "@hooks": ["./hooks/index"],
+      "@hooks/*": ["./hooks/*"],
+      "@storage": ["./storage/index"],
+      "@storage/*": ["./storage/*"],
+      "@assets/*": ["./assets/*"]
+    }
   }
 }
