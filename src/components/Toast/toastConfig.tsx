@@ -12,7 +12,7 @@ const toastConfig: ToastConfig = {
       <View style={styles.imageWrapper}>
         <FastImage
           resizeMode="contain"
-          source={require('@assets/common/success-toast.webp')}
+          source={require("@assets/common/success-toast.webp")}
           style={{ flex: 1 }}
         />
       </View>
@@ -20,7 +20,7 @@ const toastConfig: ToastConfig = {
         <StyledText style={styles.label} variant="b1-m">
           {text1}
         </StyledText>
-        <Show when={!!text2 ?? false}>
+        <Show when={!!text2}>
           <View>
             <View style={{ height: 4 }} />
             <StyledText style={styles.label} variant="b2-m">
@@ -35,17 +35,17 @@ const toastConfig: ToastConfig = {
     <View
       style={{
         backgroundColor: colors.monoVariants.chillGrey_1,
-        width: Dimensions.get('screen').width - 40,
+        width: Dimensions.get("screen").width - 40,
         paddingHorizontal: dimensions[4],
         paddingVertical: dimensions[3],
-        flexDirection: 'row',
+        flexDirection: "row",
         gap: dimensions[3],
-        alignItems: 'center',
+        alignItems: "center",
         borderRadius: dimensions[3],
       }}
     >
       <FastImage
-        source={require('@assets/common/warning-toast.webp')}
+        source={require("@assets/common/warning-toast.webp")}
         style={{
           aspectRatio: 1 / 1,
           height: dimensions[8],

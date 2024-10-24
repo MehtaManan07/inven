@@ -38,18 +38,27 @@
 // };
 
 // export default FUEScreen;
-
 import { useState } from "react";
-import { View, Button, TextInput, StyleSheet } from "react-native";
+import {
+  View,
+  Button,
+  TextInput,
+  StyleSheet,
+  NativeModules,
+} from "react-native";
 import { ToDoListView } from "./TodoListView";
-import { colors } from "@foundation";
+
+const { CalendarModule } = NativeModules;
 
 const ToDoApp = () => {
   const [task, setTask] = useState("");
 
   const addTask = () => {
-    // Triggering the native component to add a task
-    setTask("");
+    if (task.trim().length > 0) {
+      CalendarModule.createCalendarEvent("testName", task);
+      // setTasks([...tasks, task]); // Update the list of tasks
+      // setTask(""); // Clear the input field after adding
+    }
   };
 
   return (
@@ -61,7 +70,7 @@ const ToDoApp = () => {
         onChangeText={setTask}
       />
       <Button title="Add Task" onPress={addTask} />
-      <ToDoListView newTask={task} style={styles.nativeView} />
+      <ToDoListView newTask="asasa" style={{}} />
     </View>
   );
 };
@@ -79,11 +88,6 @@ const styles = StyleSheet.create({
     height: 40,
     marginBottom: 8,
     paddingHorizontal: 8,
-  },
-  nativeView: {
-    backgroundColor: colors.red,
-    flex: 1,
-    marginTop: 16,
   },
 });
 
